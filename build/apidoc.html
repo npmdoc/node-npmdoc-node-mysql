@@ -129,6 +129,12 @@
 
         <li>
 
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">node-mysql.</span>node_mysql</span>
+
+        </li>
+
+        <li>
+
             <span class="apidocSignatureSpan">string <span class="apidocSignatureSpan">node-mysql.</span>OPTIMISTIC_LOCK_EXCEPTION</span>
 
         </li>
@@ -753,6 +759,43 @@
 
     </ol></li>
 
+    <li class="apidocModuleLi"><a href="#apidoc.module.node-mysql.node_mysql">module node-mysql.node_mysql</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.node-mysql.node_mysql.DB">
+            function <span class="apidocSignatureSpan">node-mysql.node_mysql.</span>DB
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.node-mysql.node_mysql.Row">
+            function <span class="apidocSignatureSpan">node-mysql.node_mysql.</span>Row
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.node-mysql.node_mysql.Table">
+            function <span class="apidocSignatureSpan">node-mysql.node_mysql.</span>Table
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">string <span class="apidocSignatureSpan">node-mysql.node_mysql.</span>OPTIMISTIC_LOCK_EXCEPTION</span>
+
+        </li>
+
+    </ol></li>
+
 </ol></div>
 
 <div class="apidocSectionDiv">
@@ -832,6 +875,8 @@ db.cursor(q, function(row, cb) {
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
+
+
 
 
 
@@ -3286,6 +3331,74 @@ db.cursor(q, function(row, cb) {
     <h2>
         <a href="#apidoc.element.node-mysql.model.Table" id="apidoc.element.node-mysql.model.Table">
         function <span class="apidocSignatureSpan">node-mysql.model.</span>Table
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">Table = function () {
+    this._init.apply(this, arguments);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.node-mysql.node_mysql" id="apidoc.module.node-mysql.node_mysql">module node-mysql.node_mysql</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.node-mysql.node_mysql.DB" id="apidoc.element.node-mysql.node_mysql.DB">
+        function <span class="apidocSignatureSpan">node-mysql.node_mysql.</span>DB
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">DB = function () {
+    this._init.apply(this, arguments);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.node-mysql.node_mysql.Row" id="apidoc.element.node-mysql.node_mysql.Row">
+        function <span class="apidocSignatureSpan">node-mysql.node_mysql.</span>Row
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">Row = function () {
+    this._init.apply(this, arguments);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+var q = &#x27;select * from users&#x27;;
+
+db.cursor(q, function(row, cb) {
+    cps.rescur({
+        &#x27;try&#x27;: function() {
+            cps.seq([
+                function(_, cb) {
+                    var user = new User.<span class="apidocCodeKeywordSpan">Row</span>(row);
+                    user.update(conn, {active: 1}, cb);
+                },
+                function(res, cb) {
+                    console.log(res);
+                    cb();
+                }
+            ], cb);
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.node-mysql.node_mysql.Table" id="apidoc.element.node-mysql.node_mysql.Table">
+        function <span class="apidocSignatureSpan">node-mysql.node_mysql.</span>Table
         <span class="apidocSignatureSpan">()</span>
         </a>
     </h2>
